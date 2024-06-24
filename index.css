@@ -1,0 +1,270 @@
+/* COLORS */
+:root {
+	--Black: #0E1323;
+	--White: #FFFFFF;
+	--Gray: #D8D8D8;
+	--DarkBlue: #1C204B;
+	--DarkBlue-Hover: #33397A;
+	--MediumBlue: #5747EA;
+	--LightBlue: #55C2E6;
+	--FaintBluePurple: #7078C9;
+	--Violet: #BBC0FF;
+	--Purple: #7335D2;
+	--Green: #4BCF82;
+	--Orange: #FF8B64;
+	--Yellow: #F1C75B;
+	--Red: #FF5E7D;
+}
+body {
+	background-color: var(--Black);
+	color: var(--White);
+}
+
+/* FONTS */
+* {
+	font-family: "Rubik", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+}
+h1 {
+	font-size: 24px;
+	font-weight: 300;
+}
+h2 {
+	font-weight: 500;
+}
+.font-sm {
+	font-size: 15px;
+}
+.font-xl {
+	font-size: 32px;
+	font-weight: 300;
+}
+.font-500 {
+	font-weight: 500;
+}
+
+@media screen and (min-width: 1100px) {
+	h1 {
+		font-size: 40px;
+	}
+	.font-xl {
+		font-size: 56px;
+	}
+}
+.previous {
+	color: var(--Violet);
+	font-size: 15px;
+}
+.color-violet {
+	color: var(--Violet);
+}
+
+/* MISC */
+li {
+	list-style-type: none;
+}
+
+/* LAYOUT */
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	padding-top: 80px;
+}
+@media screen and  (min-width: 1100px) {
+	body {
+		padding-top: 0;
+	}
+}
+main {
+	max-width: 1100px;
+	display: grid;
+	grid-template-columns: 327px;
+	grid-template-rows: auto;
+	gap: 24px;
+}
+
+.title-card {
+	height: 203px;
+	border-radius: 15px;
+	background-color: var(--DarkBlue);
+}
+
+.user {
+	display: flex;
+	border-radius: 15px;
+	background-color: var(--MediumBlue);
+	height: 133px;
+	padding: 32px;
+	align-items: center;
+	gap: 20px;
+}
+.user img {
+	height: 64px;
+	border: 3px solid white;
+	border-radius: 100%;
+	box-sizing: content-box;
+	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+.user-data {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	height: 70px;
+	align-items: center;
+	color: var(--FaintBluePurple);
+}
+nav ul li {
+	cursor: pointer;
+}
+nav ul li.selected {
+	color: var(--White);
+}
+
+nav ul li:hover {
+	color: var(--White);
+}
+
+@media screen and (min-width: 1100px) {
+	main {
+		display: grid;
+		grid-template-columns: repeat(4, 255px);
+		grid-template-rows: repeat(2, 244px);
+		grid-gap: 30px;
+	}
+	.title-card {
+		grid-row: 1 / span 2;
+		height: auto;
+	}
+	.user {
+		height: 354px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 43px;
+	}
+	.user img {
+		height: 78px;
+	}
+	.user-data {
+		gap: 3px;
+	}
+	nav ul {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 21px;
+		padding-left: 32px;
+		height: 164px;
+		justify-content: center;
+	}
+}
+
+.card {
+	background-color: var(--DarkBlue);
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: relative;
+	overflow: hidden;
+	height: 160px;
+}
+
+
+@media screen and (min-width: 1100px) {
+	.card {
+		height: auto;
+	}
+}
+.card .icon {
+	position: absolute;
+	right: 17.5px;
+	top: -11px;
+}
+
+.card-data {
+	z-index: 1;
+	background-color: var(--DarkBlue);
+	height: 122px;
+	border-radius: 15px;
+	padding: 28px 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	cursor: pointer;
+}
+.card-data:hover {
+	background-color: var(--DarkBlue-Hover);
+}
+
+@media screen and (min-width: 1100px) {
+	.card-data {
+		height: 199px;
+		padding: 30px;
+		gap: 24px;
+	}
+}
+
+.card-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.ellipsis {
+	height: 5px;
+	width: 21px;
+	cursor: pointer;
+}
+.ellipsis:hover {
+	filter: brightness(1.5);
+}
+
+[data-time] {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@media screen and (min-width: 1100px) {
+	[data-time] {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;	
+	}
+}
+.work {
+	background-color: var(--Orange);
+}
+.play {
+	background-color: var(--LightBlue);
+}
+.study {
+	background-color: var(--Red);
+}
+.exercise {
+	background-color: var(--Green);
+}
+.social {
+	background-color: var(--Purple);
+}
+.self-care {
+	background-color: var(--Yellow);
+}
+
+/* INFO TOGGLE */
+[data-time="daily"] {
+	
+}
+[data-time="weekly"] {
+	
+}
+[data-time="monthly"] {
+
+}
+.hidden {
+	display: none;
+}

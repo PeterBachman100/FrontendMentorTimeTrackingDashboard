@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="index.css" />
+  
+  <script defer src="./index.js"></script>
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+  <main>
+    <div class="title-card">
+      <div class="user">
+        <img src="./images/image-jeremy.png" />
+        <div class="user-data">
+          <span class="font-sm color-violet">Report for</span>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li id="btn-daily" data-time="daily">Daily</li>
+          <li id="btn-weekly" data-time="weekly" class="selected">Weekly</li>
+          <li id="btn-monthly" data-time="monthly">Monthly</li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="card work">
+      <img src="./images/icon-work.svg" class="icon" />
+      <div class="card-data">
+        <div class="card-title">
+          <h2>Work</h2>
+          <img src="./images/icon-ellipsis.svg" class="ellipsis" />
+        </div>
+        <div data-time="daily" class="hidden"> <!-- daily -->
+          <p class="font-xl">5hrs</p>
+          <p class="previous">Yesterday - 7hrs</p>
+        </div>
+        <div data-time="weekly"> <!-- weekly -->
+          <p class="font-xl">32hrs</p>
+          <p class="previous">Last Week - 36hrs</p>
+        </div>
+        <div data-time="monthly" class="hidden"> <!-- monthly -->
+          <p class="font-xl">103hrs</p>
+          <p class="previous">Last Month - 128hrs</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card play">
+      <img src="./images/icon-play.svg" class="icon"/>
+      <div class="card-data">
+        <div class="card-title">
+          <h2>Play</h2>
+          <img src="./images/icon-ellipsis.svg" class="ellipsis" />
+        </div>
+        <div data-time="daily" class="hidden"> <!-- daily -->
+          <p class="font-xl">1hr</p>
+          <p class="previous">Yesterday - 2hrs</p>
+        </div>
+        <div data-time="weekly"> <!-- weekly -->
+          <p class="font-xl">10hrs</p>
+          <p class="previous">Last Week - 8hrs</p>
+        </div>
+        <div data-time="monthly" class="hidden"> <!-- monthly -->
+          <p class="font-xl">23hrs</p>
+          <p class="previous">Last Month - 29hrs</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card study">
+      <img src="./images/icon-study.svg" class="icon"/>
+      <div class="card-data">
+        <div class="card-title">
+          <h2>Study</h2>
+          <img src="./images/icon-ellipsis.svg" class="ellipsis" />
+        </div>
+        <div data-time="daily" class="hidden"> <!-- daily -->
+          <p class="font-xl">0hrs</p>
+          <p class="previous">Yesterday - 1hrs</p>
+        </div>
+        <div data-time="weekly"> <!-- weekly -->
+          <p class="font-xl">4hrs</p>
+          <p class="previous">Last Week - 7hrs</p>
+        </div>
+        <div data-time="monthly" class="hidden"> <!-- monthly -->
+          <p class="font-xl">13hrs</p>
+          <p class="previous">Last Month - 19hrs</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card exercise">
+      <img src="./images/icon-exercise.svg" class="icon"/>
+      <div class="card-data">
+        <div class="card-title">
+          <h2>Exercise</h2>
+          <img src="./images/icon-ellipsis.svg" class="ellipsis" />
+        </div>
+        <div data-time="daily" class="hidden"> <!-- daily -->
+          <p class="font-xl">1hr</p>
+          <p class="previous">Yesterday - 1hr</p>
+        </div>
+        <div data-time="weekly"> <!-- weekly -->
+          <p class="font-xl">4hrs</p>
+          <p class="previous">Last Week - 5hrs</p>
+        </div>
+        <div data-time="monthly" class="hidden"> <!-- monthly -->
+          <p class="font-xl">11hrs</p>
+          <p class="previous">Last Month - 18hrs</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card social">
+      <img src="./images/icon-social.svg" class="icon"/>
+      <div class="card-data">
+        <div class="card-title">
+          <h2>Social</h2>
+          <img src="./images/icon-ellipsis.svg" class="ellipsis" />
+        </div>
+        <div data-time="daily" class="hidden"> <!-- daily -->
+          <p class="font-xl">1hr</p>
+          <p class="previous">Yesterday - 3hrs</p>
+        </div>
+        <div data-time="weekly"> <!-- weekly -->
+          <p class="font-xl">5hrs</p>
+          <p class="previous">Last Week - 10hrs</p>
+        </div>
+        <div data-time="monthly" class="hidden"> <!-- monthly -->
+          <p class="font-xl">21hrs</p>
+          <p class="previous">Last Month - 23hrs</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card self-care">
+      <img src="./images/icon-self-care.svg" class="icon"/>
+      <div class="card-data">
+        <div class="card-title">
+          <h2>Self Care</h2>
+          <img src="./images/icon-ellipsis.svg" class="ellipsis" />
+        </div>
+        <div data-time="daily" class="hidden"> <!-- daily -->
+          <p class="font-xl">0hrs</p>
+          <p class="previous">Yesterday - 1hr</p>
+        </div>
+        <div data-time="weekly"> <!-- weekly -->
+          <p class="font-xl">1hr</p>
+          <p class="previous">Last Week - 2hrs</p>
+        </div>
+        <div data-time="monthly" class="hidden"> <!-- monthly -->
+          <p class="font-xl">7hrs</p>
+          <p class="previous">Last Month - 11hrs</p>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+</body>
+</html>
